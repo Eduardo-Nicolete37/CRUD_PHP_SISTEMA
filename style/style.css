@@ -1,0 +1,47 @@
+header h1 {
+    text-align: center;
+    color: lightgray;
+}
+
+main {
+    margin: auto;
+    text-align: center;
+    width: 30%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: lightgray;
+
+}
+
+body {
+    background-color: #1A1A1E;
+}
+
+h1 {
+    text-align: center;
+    color: lightgray;
+}
+
+footer p {
+    text-align: center;
+    color: lightgray;
+}
+
+.read {
+    text-align: left;
+    color: lightgray;
+}
+
+.update {
+    text-align: left;
+    color: lightgray;
+}
+
+.create {
+    color: lightgray;
+}
+.delete{
+    color: lightgray;
+}

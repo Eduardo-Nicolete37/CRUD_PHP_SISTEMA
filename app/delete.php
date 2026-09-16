@@ -1,42 +1,35 @@
-<?php require_once '../database/connect.php'; ?>
+<?php require_once '../includes/helpers.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Delete USERS</title>
 </head>
-
 <body>
     <?php
     include '../includes/header.php';
     ?>
     <h1>Apague um User aqui: </h1>
+    <div class="delete">
     <form action="" method="POST">
         <label for="id">ID: </label>
         <input type="number" name="id" id="id"> <br>
         <input type="submit" value="Apagar">
     </form>
+    <hr>
+    <?php 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
+    $id = $_POST['id'];
+    delete($conexao, $id);}
+    ?>
+    <hr>
     <?php
     include '../includes/footer.php';
     ?>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        $sql = "DELETE FROM  alunos WHERE id = :id";
-
-        try {
-            $stmt = $conexao->prepare($sql);
-            $stmt->bindParam(":id", $_POST['id']);
-            $stmt->execute();
-            echo "Registro deletado! <br>";
-            echo "<a href='../app/read.php'>Verifique aqui</a><br>";
-        } catch (PDOException $e) {
-            echo "Erro: " . $e->getMessage();
-        }
-    }
-    ?>
+    </div>
 </body>
 
 </html>

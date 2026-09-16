@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>UPDATE USERS</title>
 </head>
 <body>
+    <?php include '../includes/header.php';?>
         <h1>Atualiza usuário especifíco</h1>
+        <div class="update">
         <p>No caso de não precisar atualizar algum dado, coloque o mesmo dado já inserido anteriormente</p>
     <section class="forms">
         <form action="" method="post">
@@ -31,30 +34,9 @@
         </form>
         <?php
     if ($_SERVER['REQUEST_METHOD']=="POST") {
-    try{ 
-    if (isset($_POST['id']) || is_numeric($_POST['valor'])){
-        $id = $_POST['id'];
-        $name = $_POST['name'];
-        $turma = $_POST['turma'];
-        $email = $_POST['email'];
-        $nasc = $_POST['nasc'];
-        $ativo = $_POST['ativo'];
-    }else {
-        echo "ID inválido, tente novamente";
-    } 
-     $sql = 'UPDATE alunos SET nome = :nome, turma = :turma, nasc = :nasc, ativo = :ativo, email = :email WHERE id=:id';
-        $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(":id", $id);
-        $stmt->bindParam(":nome", $name);
-        $stmt->bindParam(":turma", $turma);
-        $stmt->bindParam(":email", $email);
-        $stmt->bindParam(":nasc", $nasc);
-        $stmt->bindParam(":ativo", $ativo);
-        $stmt->execute();
-        echo "Registro atualizado! <br>";
-        echo "<a href='./read.php'>Verifique aqui</a><br>";
-    }catch (PDOException $e) {
-        echo 'Erro: ' . $e->getMessage();}}
+    }
     ?>
+    <?php include '../includes/header.php';?>
+    </div>
 </body>
 </html>
