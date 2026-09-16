@@ -30,7 +30,9 @@
 
 #### 2.4. Atualizar o registro do Aluno(s)
 - Arquivo Responsável - update.php
+- Recebe o ID do User e os novos dados, atualizando o registro entrelaçado ao ID recebido
 
 #### 2.5. Excluir o registro do Aluno(s)
 - Arquivo Responsável - delete.php
+- Recebe apenas o ID, deletando o registro correspondente ao ID recebido
 
