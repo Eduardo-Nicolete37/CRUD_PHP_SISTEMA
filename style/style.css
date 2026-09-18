@@ -45,3 +45,7 @@ footer p {
 .delete{
     color: lightgray;
 }
+.navbar {
+    text-align: center;
+    color: lightgray;
+}

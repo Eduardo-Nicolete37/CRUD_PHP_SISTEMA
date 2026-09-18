@@ -1,5 +1,5 @@
 <header>
-    <nav>
+    <nav class="navbar">
         <a href="../">Inicio</a>
         <a href="../app/create.php">Cadastrar</a>
         <a href="../app/read.php">Vizualizar todos</a>
