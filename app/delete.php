@@ -25,7 +25,6 @@
     $id = $_POST['id'];
     delete($conexao, $id);}
     ?>
-    <hr>
     <?php
     include '../includes/footer.php';
     ?>

@@ -36,7 +36,7 @@
     if ($_SERVER['REQUEST_METHOD']=="POST") {
     }
     ?>
-    <?php include '../includes/header.php';?>
+    <?php include '../includes/footer.php';?>
     </div>
 </body>
 </html>
