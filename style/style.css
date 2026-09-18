@@ -42,9 +42,11 @@ footer p {
 .create {
     color: lightgray;
 }
-.delete{
+
+.delete {
     color: lightgray;
 }
+
 .navbar {
     text-align: center;
     color: lightgray;

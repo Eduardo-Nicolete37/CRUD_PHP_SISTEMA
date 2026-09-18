@@ -1,4 +1,5 @@
-<?php require_once '../includes/helpers.php'; // Chamamos o helpers.php para podermos usar as funções que estão lá ?>
+<?php require_once '../includes/helpers.php'; // Chamamos o helpers.php para podermos usar as funções que estão lá 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,14 +11,16 @@
 </head>
 
 <body>
-    <?php include '../includes/header.php'; // Chamamos o header que está nos includes ?>
+    <?php include '../includes/header.php'; // Chamamos o header que está nos includes 
+    ?>
     <h1>Registros de Alunos: </h1>
     <hr>
-    <?php 
+    <?php
     read($conexao); // Chama a função do READ que está no helpers
     ?>
     <a href="../">Voltar</a>
-    <?php include '../includes/footer.php'; //Chamamos o footer que está nos includes?>
+    <?php include '../includes/footer.php'; //Chamamos o footer que está nos includes
+    ?>
 </body>
 
 </html>

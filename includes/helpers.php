@@ -82,10 +82,11 @@ function readWithWhere($conexao, $id)
     }
     echo '<br>' . "<a href='./'>Retorne aqui</a>";
 }
-function update($conexao, $id, $name, $turma, $email, $nasc, $ativo){
-    try{ 
-     $sql = 'UPDATE alunos SET nome = :nome, turma = :turma, nasc = :nasc, ativo = :ativo, email = :email WHERE id=:id';
-     // Definimos a função que será enviada ao SQL
+function update($conexao, $id, $name, $turma, $email, $nasc, $ativo)
+{
+    try {
+        $sql = 'UPDATE alunos SET nome = :nome, turma = :turma, nasc = :nasc, ativo = :ativo, email = :email WHERE id=:id';
+        // Definimos a função que será enviada ao SQL
         $stmt = $conexao->prepare($sql);
         $stmt->bindParam(":id", $id);
         $stmt->bindParam(":nome", $name);
@@ -96,6 +97,7 @@ function update($conexao, $id, $name, $turma, $email, $nasc, $ativo){
         $stmt->execute();
         echo "Registro atualizado! <br>";
         echo "<a href='../app/read.php'>Verifique aqui</a><br>";
-    }catch (PDOException $e) {
-        echo 'Erro: ' . $e->getMessage();}
+    } catch (PDOException $e) {
+        echo 'Erro: ' . $e->getMessage();
+    }
 }
