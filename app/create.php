@@ -27,9 +27,9 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email"><br>
                 Status:
-                <input type="radio" id="ativo" name="ativo" value="ativo" checked>
+                <input type="radio" id="ativo" name="ativo" value="1" checked>
                 <label for="ativo">Ativo</label>
-                <input type="radio" id="inativo" name="ativo" value="inativo">
+                <input type="radio" id="inativo" name="ativo" value="0">
                 <label for="inativo">Inativo</label><br><br>
                 <input type="reset" value="Limpar">
                 <input type="submit" value="Enviar">
