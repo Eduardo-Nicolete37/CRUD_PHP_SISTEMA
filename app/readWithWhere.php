@@ -22,7 +22,11 @@
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
         $id = $_POST['id'];
-        readWithWhere($conexao, $id);
+        if ($id<2147483647){
+        readWithWhere($conexao, $id);}
+        else {
+            echo "Número inválido, tente novamente <br>";
+        }
         } 
         echo '<hr>';
         include '../includes/footer.php';
