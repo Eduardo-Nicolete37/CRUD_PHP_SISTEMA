@@ -1,4 +1,4 @@
-<?php require_once '../includes/helpers.php'; ?>
+<?php require_once '../includes/helpers.php'; // Chamamos o helpers.php para podermos usar as funções que estão lá?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php
-    include '../includes/header.php';
+    include '../includes/header.php'; // Chamamos o header que está nos includes
     ?>
     <h1>Apague um User aqui: </h1>
     <div class="delete">
@@ -26,7 +26,7 @@
     delete($conexao, $id);}
     ?>
     <?php
-    include '../includes/footer.php';
+    include '../includes/footer.php'; //Chamamos o footer que está nos includes
     ?>
     </div>
 </body>

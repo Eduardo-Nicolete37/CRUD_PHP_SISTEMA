@@ -1,4 +1,4 @@
-<?php require_once '../includes/helpers.php'; ?>
+<?php require_once '../includes/helpers.php'; // Chamamos o helpers.php para podermos usar as funções que estão lá?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,7 +12,7 @@
 <body>
     <div class="create">
         <?php
-        include '../includes/header.php';
+        include '../includes/header.php'; // Chamamos o header que está nos includes
         ?>
         <h1>Registre-se: </h1>
         <hr>
@@ -37,14 +37,15 @@
         </main>
         <hr>
         <?php
+        // Esse if serve para o php somente comece no momento em que o formulário seja submetido
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $name = $_POST['nome'];
+            $name = $_POST['nome']; // Para facilitar a intepretação do código, inserimos os POSTs dentro de váriaveis
             $turma = $_POST['turma'];
             $nasc = $_POST['nasc'];
-            $ativo = (bool)$_POST['ativo'];
+            $ativo = (bool)$_POST['ativo']; // Forçamos essa váriavel ser booleana
             $email = $_POST['email'];
-            create($conexao, $name, $turma, $nasc, $ativo, $email);
-            include '../includes/footer.php';
+            create($conexao, $name, $turma, $nasc, $ativo, $email); // Chamamos a função do helpers.php
+            include '../includes/footer.php'; //Chamamos o footer que está nos includes
         }
         ?>
     </div>
