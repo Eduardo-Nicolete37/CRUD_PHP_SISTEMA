@@ -50,7 +50,11 @@ function read($conexao)
             echo "Turma: " . $aluno['turma'] . '<br>';
             echo "Email: " . $aluno['email'] . '<br>';
             echo "Nascimento: " . $aluno['nasc'] . '<br>';
-            echo "Ativo: " . $aluno['ativo'] . '<br>';
+            if ($aluno['ativo'] == 1) {
+                echo "Ativo: Sim";
+            } else {
+                echo "Ativo: Não";
+            }
             echo "</div><hr>";
         }
     } catch (PDOException $e) {
@@ -73,7 +77,11 @@ function readWithWhere($conexao, $id)
             echo "Turma:" . $aluno['turma'] . '<br>';
             echo "Email:" . $aluno['email'] . '<br>';
             echo "Data de Nascimento:" . $aluno['nasc'] . '<br>';
-            echo "Ativo:" . $aluno['ativo'];
+            if ($aluno['ativo'] == 1) {
+                echo "Ativo: Sim";
+            } else {
+                echo "Ativo: Não";
+            }
         } else {
             echo "Nenhum registro encontrado.";
         }
