@@ -57,7 +57,15 @@ footer p {
 }
 
 .navbar {
-    text-align: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+.navbar1 {
+    color: lightgray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navbar2 {
     color: lightgray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
