@@ -6,6 +6,6 @@ if(session_status() == PHP_SESSION_NONE){
 $_SESSION = array();
 session_destroy();
 
-header("Location: ../");
+header("Location: /mini_sistema/");
 exit();
 ?>

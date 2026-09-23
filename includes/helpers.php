@@ -15,7 +15,7 @@ function create($conexao, $name, $turma, $nasc, $ativo, $email)
 
             $stmt->execute();
             echo "Aluno inserido com sucesso! <br>";
-            echo "<a href='../app/read.php'>Veja aqui</a>";
+            echo "<a href='/mini_sistema/app/read.php'>Veja aqui</a>";
         } catch (PDOException $e) {
             echo "Erro: " . $e->getMessage();
         }
@@ -30,7 +30,7 @@ function delete($conexao, $id)
         $stmt->bindParam(":id", $id); // Enviamos o ID que será deletado 
         $stmt->execute();
         echo "Registro deletado! <br>";
-        echo "<a href='../app/read.php'>Verifique aqui</a><br>";
+        echo "<a href='/mini_sistema/app/read.php'>Verifique aqui</a><br>";
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage();
     }
@@ -88,7 +88,7 @@ function readWithWhere($conexao, $id)
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage();
     }
-    echo '<br>' . "<a href='./'>Retorne aqui</a>";
+    echo '<br>' . "<a href='/mini_sistema'>Retorne aqui</a>";
 }
 function update($conexao, $id, $name, $turma, $email, $nasc, $ativo)
 {
@@ -104,7 +104,7 @@ function update($conexao, $id, $name, $turma, $email, $nasc, $ativo)
         $stmt->bindParam(":email", $email);
         $stmt->execute();
         echo "Registro atualizado! <br>";
-        echo "<a href='../app/read.php'>Verifique aqui</a><br>";
+        echo "<a href='/mini_sistema/app/read.php'>Verifique aqui</a><br>";
     } catch (PDOException $e) {
         echo 'Erro: ' . $e->getMessage();
     }
@@ -122,7 +122,7 @@ function cadastraUser($conexao, $email, $passWD)
         $stmt->bindParam(":passWD", $passWD);
         $stmt->execute();
         echo "Usuário cadastrado com sucesso! <br>";
-        echo "<a href='../app/read.php'>Veja aqui</a>";
+        echo "<a href='/mini_sistema/app/read.php'>Veja aqui</a>";
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage();
     }
@@ -140,13 +140,13 @@ function consultaUser($conexao, $email)
         if ($usuario !== false) { // Se o Aluno não existir, o print dos dados são feitos
             return $usuario;
         } else {
-            echo "Nenhum registro encontrado. Cadastre-se " . '<a href="./cadastrar.php">aqui</a>';
+            echo "Nenhum registro encontrado. Cadastre-se " . '<a href="/mini_sistema/cadastrar.php">aqui</a>';
             exit();
         }
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage();
     }
-    echo '<br>' . "<a href='./'>Retorne aqui</a>";
+    echo '<br>' . "<a href='/mini_sistema'>Retorne aqui</a>";
 }
 
 ?>

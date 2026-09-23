@@ -13,7 +13,7 @@
 <body>
     <div class="create">
         <?php
-        include '../includes/header.php'; // Chamamos o header que está nos includes
+        include '..\includes\header.php'; // Chamamos o header que está nos includes
         ?>
         <h1>Acesse o sistema: </h1>
         <hr>
@@ -36,7 +36,7 @@
                 if ($usuario['email'] == $_POST['email'] && $usuario['passWD'] == $_POST['passWD']) {
                     session_start();
                     $_SESSION['id'] = $usuario['id'];
-                    header("Location: ../index.php");
+                    header("Location: /mini_sistema/index.php");
                     exit();
                 } else {
                     echo "Usuário e/ou senha inválidos! Tente novamente";
