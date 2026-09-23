@@ -46,9 +46,9 @@
             $ativo = (bool)$_POST['ativo']; // Forçamos essa váriavel ser booleana
             $email = $_POST['email'];
             create($conexao, $name, $turma, $nasc, $ativo, $email); // Chamamos a função do helpers.php
+            }
             include '../includes/footer.php'; //Chamamos o footer que está nos includes
-        }
-        ?>
+            ?>
     </div>
 </body>
 
