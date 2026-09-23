@@ -109,3 +109,44 @@ function update($conexao, $id, $name, $turma, $email, $nasc, $ativo)
         echo 'Erro: ' . $e->getMessage();
     }
 }
+
+// Funções para Login
+function cadastraUser($conexao, $email, $passWD)
+{
+
+    $sql = "INSERT INTO users (email, passWD) VALUES (:email, :passWD)";
+    // Definimos a função que será enviada ao SQL
+    try {
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindParam(":email", $email); // Aqui, definimos os valores que seram enviados para a table
+        $stmt->bindParam(":passWD", $passWD);
+        $stmt->execute();
+        echo "Usuário cadastrado com sucesso! <br>";
+        echo "<a href='../app/read.php'>Veja aqui</a>";
+    } catch (PDOException $e) {
+        echo "Erro: " . $e->getMessage();
+    }
+}
+
+function consultaUser($conexao, $email)
+{
+    try {
+        $sql = "SELECT id, email, passWD FROM users WHERE email = :email;"; // Definimos a função que será enviada ao SQL
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindParam(":email", $email); // O ID  que será procurado é enviado à database
+        $stmt->execute();
+
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($usuario !== false) { // Se o Aluno não existir, o print dos dados são feitos
+            return $usuario;
+        } else {
+            echo "Nenhum registro encontrado. Cadastre-se " . '<a href="./cadastrar.php">aqui</a>';
+            exit();
+        }
+    } catch (PDOException $e) {
+        echo "Erro: " . $e->getMessage();
+    }
+    echo '<br>' . "<a href='./'>Retorne aqui</a>";
+}
+
+?>

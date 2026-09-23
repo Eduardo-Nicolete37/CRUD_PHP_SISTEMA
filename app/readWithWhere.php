@@ -1,4 +1,6 @@
-<?php require_once "../includes/helpers.php"; // Chamamos o helpers.php para podermos usar as funções que estão lá
+<?php 
+require_once '../login/verifica_user.php';
+require_once "../includes/helpers.php"; // Chamamos o helpers.php para podermos usar as funções que estão lá
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
