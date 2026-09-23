@@ -15,7 +15,7 @@
         <?php
         include '../includes/header.php'; // Chamamos o header que está nos includes
         ?>
-        <h1>Acesse no sistema: </h1>
+        <h1>Acesse o sistema: </h1>
         <hr>
         <main>
             <form action="" method="POST">
