@@ -123,5 +123,5 @@ Como a operação é baseada no ID, somente o registro correspondente ao identif
 ### 2.6. Extra
 Vale ressaltar que a maioria dos inputs de ID, foram tratados não somente no frontend, mas também no backend, evitando que:
 - O limite do INT seja quebrado;
-- Seja digitado strings, sendo possivel ao alterar o backend;
+- Seja digitado strings, sendo possivel ao alterar o frontend;
 - Seja feito um input vazio.
